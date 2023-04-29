@@ -1,5 +1,5 @@
 const cacheName = 'sitecache';
-const filesToCache = ['/', '/chart.min.js', '/index.html', 'manifest.json', 'sw.js'];self.addEventListener('install', function(event) {
+const filesToCache = ['chart.min.js', 'index.html', 'manifest.json', 'sw.js'];self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(cacheName).then(function(cache) {
       return cache.addAll(filesToCache);
